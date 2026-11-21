@@ -1,5 +1,7 @@
 name: Publish approved website to GitHub Pages
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -20,11 +22,18 @@ jobs:
         with:
           node-version: '22'
       - name: Check launch settings
-        run: node scripts/check-launch.mjs
+        run: node scripts/check-launch.mjs --preview
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Prepare GitHub preview
+        run: |
+          mkdir -p _preview
+          cp -R site/. _preview/
+          rm -f _preview/CNAME
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: _preview
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

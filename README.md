@@ -6,7 +6,7 @@ A dependency-free static website for kindnessletters.org. No database, analytics
 
 Run `python3 -m http.server 8000 --directory site` from this folder and open http://localhost:8000. In the managed preview environment use `sites-preview start /workspace/kindness-letters` instead. No build is needed. `.openai/hosting.json` is only local preview configuration; this project is intended for GitHub Pages.
 
-**Not published.** Publishing is manual only. The workflow does not run on pushes. Do not enable a legacy branch-based Pages deployment before approval.
+**Live preview requested.** The workflow now deploys pushes to `main` and can also be run manually. It publishes a preview without the custom-domain CNAME and permits the temporary text branding. The standard launch check still requires the original logo. DNS has not been changed.
 
 ## Update content
 
@@ -33,7 +33,7 @@ Open `display-sign.html`, choose Print A5 sign, select A5 portrait at 100% scale
 2. Set the email and logo, run the launch check, and commit changes.
 3. In GitHub Settings → Pages select GitHub Actions as the build source.
 4. When authorised, configure the custom domain `kindnessletters.org` and its DNS using GitHub’s current Pages documentation; verify ownership and enable HTTPS once available. `site/CNAME` is prepared but does not change DNS or repository settings by itself.
-5. Manually run **Publish approved website to GitHub Pages** in Actions. The workflow has only `workflow_dispatch`; pushing changes never triggers it.
+5. Manually run **Publish approved website to GitHub Pages** in Actions. The workflow also runs on pushes to `main`. It currently stages a GitHub-hosted preview without CNAME; restore the custom-domain deployment only when DNS is ready.
 6. Check the resulting deployment and custom domain. For subsequent approved changes, run the workflow manually again.
 
 The deployment workflow uploads only `site/`, excluding repository metadata and maintenance scripts.
