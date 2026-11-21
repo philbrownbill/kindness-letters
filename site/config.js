@@ -3,7 +3,7 @@ window.KINDNESS_CONFIG = {
   phase: 'recruitment', // 'recruitment' or 'recipient'
   email: 'hello@kindnessletters.org', // Public project contact address
   campaign: 'Christmas 2026',
-  introduction: "This Christmas, we're bringing people together through handwritten letters. A few thoughtful words from one person to another. No strings attached. Just a little kindness.",
-  aboutSeason: "We're starting small this Christmas, with the help of local families, schools and community organisations.",
+  introduction: "This Christmas, we're bringing people together in Cheddar and the surrounding Somerset villages through handwritten letters. A few thoughtful words to brighten someone's day in our community. No strings attached. Just a little kindness.",
+  aboutSeason: "This Christmas, we're inviting families, schools and community organisations across Cheddar and the surrounding villages to help write and share letters close to home.",
   logo: '' // Set to 'assets/kindness-letters-logo.png' when original artwork is available.
 };
