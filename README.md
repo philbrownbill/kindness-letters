@@ -47,3 +47,5 @@ The shared hero label row places Christmas 2026 on the left and A Cheddar commun
 The deployment preserves both root and `/site/` URLs. A source push alone does not confirm a successful live deployment.
 
 The selected images are resized and compressed as WebP for faster loading; the source ZIP remains unchanged.
+
+The user-supplied Café Corner image (`site/assets/cafe-corner.webp`) now sits beside the sharing invitation. The full reading portrait sits beside the recipient reassurance further down. The hero hugging photo is unchanged.

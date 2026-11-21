@@ -26,3 +26,13 @@
 .display-resource{grid-column:1/-1;border-top:1px solid #e3dcd5;padding-top:30px}
 .display-resource .display-scene{max-width:390px;width:100%;margin:0 auto;padding-top:90px}
 @media(max-width:850px){.sharing-photo{max-width:360px}.display-resource{grid-column:1}.display-resource .display-scene{grid-row:auto}}
+
+/* A café display invites hosts; the reading portrait accompanies recipient reassurance. */
+.sharing-photo.cafe-photo{max-width:none;align-self:start}
+.offer .split:has(.cafe-photo){align-items:start}
+.recipient{grid-template-columns:1.2fr 1fr;align-items:center;gap:60px}
+.recipient-copy{max-width:560px}.recipient-copy h2{font-size:clamp(1.8rem,3vw,2.5rem)}
+.recipient-photo{width:100%;max-width:300px;margin:0;justify-self:center}
+.recipient-photo img{display:block;width:100%;height:auto;border-radius:10px}
+.recipient-photo figcaption{font-size:.75rem;color:#607080;line-height:1.6;margin-top:8px}
+@media(max-width:850px){.recipient{grid-template-columns:1fr;gap:28px}.recipient-photo{max-width:300px}.sharing-photo.cafe-photo{max-width:650px}}
