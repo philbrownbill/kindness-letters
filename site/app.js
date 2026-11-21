@@ -37,3 +37,14 @@ if (validEmail && status) {
   status.replaceChildren('Email us at ', address, '. These buttons open your email app.');
 }
 document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+
+const heroPhoto = document.querySelector('#hero-photo');
+if (heroPhoto) {
+  const showPhoto = () => {
+    if (!heroPhoto.naturalWidth) return;
+    heroPhoto.closest('figure').hidden = false;
+    document.querySelector('.hero-art').hidden = true;
+  };
+  heroPhoto.addEventListener('load', showPhoto);
+  if (heroPhoto.complete) showPhoto();
+}

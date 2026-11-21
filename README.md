@@ -37,3 +37,7 @@ Open `display-sign.html`, choose Print A5 sign, select A5 portrait at 100% scale
 6. Check the resulting deployment and custom domain. For subsequent approved changes, run the workflow manually again.
 
 The deployment workflow uploads only `site/`, excluding repository metadata and maintenance scripts.
+
+## Hero photograph trial
+
+The homepage uses Pexels photo 5588367, “Female Friends hugging each other”: https://www.pexels.com/photo/female-friends-hugging-each-other-5588367/ . Its license allows free website use: https://www.pexels.com/license/ (checked 21 November 2026). It is labelled as stock photography, not as project participants. The image is loaded from images.pexels.com because downloading was blocked in the editing environment; this creates a third-party image request, with no referrer. If the image fails to load (or JavaScript is disabled), the original letter illustration remains visible. For fully self-hosted assets, download the licensed original, save an optimised version under site/assets and update the image source. No tracking scripts have been added.
