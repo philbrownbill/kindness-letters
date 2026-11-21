@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '22'
       - name: Check launch settings
-        run: node scripts/check-launch.mjs --preview
+        run: node scripts/check-launch.mjs
       - uses: actions/configure-pages@v5
         with:
           enablement: true
@@ -31,6 +31,8 @@ jobs:
           mkdir -p _preview
           cp -R site/. _preview/
           rm -f _preview/CNAME
+      - name: Prepare local photograph and compatible preview paths
+        run: node scripts/prepare-preview.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _preview

@@ -14,7 +14,7 @@ Edit `site/index.html` for homepage text, `site/guidance.html` for organisation 
 
 ## Required before launch
 
-- Save the original supplied artwork as `site/assets/kindness-letters-logo.png`; set `logo: 'assets/kindness-letters-logo.png'` in `site/config.js`. The image is displayed at its natural proportions in the header and on the sign. The current plain text brand is a temporary fallback, not a replacement logo. The original image was visible in chat but not available as a downloadable file in the workspace.
+- The original approved logo is installed in `site/assets/kindness-letters-logo.png` and displayed directly in the website and A5 sign. Replace that file to change the artwork, preserving its proportions.
 - Set `email` in `site/config.js` to the approved project contact email. The approved address is currently `hello@kindnessletters.org`. Buttons explain that contact details are coming soon until this is set. When set, they open mailto links with appropriate subjects. Public static configuration must never contain secrets or private contact details.
 - Review all content and the desktop/mobile preview. The neutral K favicon is provisional; replace it with an approved favicon if desired. Add `og:image` and `twitter:image` metadata using the final approved logo's absolute URL if a social image is wanted; text social metadata is already present.
 - Run `node scripts/check-launch.mjs`. It deliberately fails until the original logo is configured (the project email is already set).
@@ -41,3 +41,7 @@ The deployment workflow uploads only `site/`, excluding repository metadata and 
 ## Hero photograph trial
 
 The homepage uses Pexels photo 5588367, “Female Friends hugging each other”: https://www.pexels.com/photo/female-friends-hugging-each-other-5588367/ . Its license allows free website use: https://www.pexels.com/license/ (checked 21 November 2026). It is labelled as stock photography, not as project participants. The image is loaded from images.pexels.com because downloading was blocked in the editing environment; this creates a third-party image request, with no referrer. If the image fails to load (or JavaScript is disabled), the original letter illustration remains visible. For fully self-hosted assets, download the licensed original, save an optimised version under site/assets and update the image source. No tracking scripts have been added.
+
+## Latest preview update
+
+The approved logo from the uploaded ZIP is now installed. The homepage highlights “A Cheddar community project” and “Spreading a little kindness, one letter at a time.” The workflow checks the real launch settings, tries to download the licensed photo for self-hosting, and preserves both the root and `/site/` URLs. If that download fails, the log reports a warning and the external-photo/letter fallback remains. A root redirect also supports existing branch-based Pages settings. Publication and photo availability still need confirmation from a successful deployment; a source push alone does not confirm them.
