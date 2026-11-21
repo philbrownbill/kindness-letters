@@ -15,9 +15,9 @@ Edit `site/index.html` for homepage text, `site/guidance.html` for organisation 
 ## Required before launch
 
 - Save the original supplied artwork as `site/assets/kindness-letters-logo.png`; set `logo: 'assets/kindness-letters-logo.png'` in `site/config.js`. The image is displayed at its natural proportions in the header and on the sign. The current plain text brand is a temporary fallback, not a replacement logo. The original image was visible in chat but not available as a downloadable file in the workspace.
-- Set `email` in `site/config.js` to the approved project contact email. It is intentionally empty: no email address has been invented. Buttons explain that contact details are coming soon until this is set. When set, they open mailto links with appropriate subjects. Public static configuration must never contain secrets or private contact details.
+- Set `email` in `site/config.js` to the approved project contact email. The approved address is currently `hello@kindnessletters.org`. Buttons explain that contact details are coming soon until this is set. When set, they open mailto links with appropriate subjects. Public static configuration must never contain secrets or private contact details.
 - Review all content and the desktop/mobile preview. The neutral K favicon is provisional; replace it with an approved favicon if desired. Add `og:image` and `twitter:image` metadata using the final approved logo's absolute URL if a social image is wanted; text social metadata is already present.
-- Run `node scripts/check-launch.mjs`. It deliberately fails until the original logo and project email are configured.
+- Run `node scripts/check-launch.mjs`. It deliberately fails until the original logo is configured (the project email is already set).
 
 ## Change the homepage phase or campaign
 

@@ -23,12 +23,17 @@ const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 const status = document.querySelector('#contact-status');
 document.querySelectorAll('[data-email]').forEach(link => {
   if (validEmail) {
-    const subject = link.dataset.email === 'write' ? 'We’d like to write Kindness Letters' : 'We’d like to offer Kindness Letters';
+    const subject = link.dataset.email === 'write' ? 'We’d like to write Kindness Letters' : 'We’d like to share Kindness Letters';
     link.href = 'mailto:' + encodeURIComponent(email) + '?subject=' + encodeURIComponent(subject);
   } else {
     link.href = 'index.html#contact';
     link.addEventListener('click', () => { if (status) status.textContent = 'Our project email is coming soon. Please check back to get involved.'; });
   }
 });
-if (validEmail && status) status.textContent = 'These links open your email app. There’s no form to fill in.';
+if (validEmail && status) {
+  const address = document.createElement('a');
+  address.href = 'mailto:' + encodeURIComponent(email);
+  address.textContent = email;
+  status.replaceChildren('Email us at ', address, '. These buttons open your email app.');
+}
 document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
