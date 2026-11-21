@@ -39,3 +39,5 @@
 
 /* Align the writing steps with the main heading below the eyebrow on desktop. */
 @media(min-width:851px){#write .instructions{padding-top:calc(.75rem * 1.65 + 22px)}}
+
+.signing-guidance{grid-column:1/-1;background:#f5f7f8;border-left:3px solid #ff6b6b;padding:28px 32px}.signing-guidance h3{font-size:1.4rem}.signing-guidance p{max-width:850px;font-size:1rem}.signing-guidance p:last-child{margin-bottom:0}@media(max-width:500px){.signing-guidance{padding:24px 20px}}
