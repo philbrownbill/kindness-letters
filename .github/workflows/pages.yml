@@ -31,7 +31,7 @@ jobs:
           mkdir -p _preview
           cp -R site/. _preview/
           rm -f _preview/CNAME
-      - name: Prepare local photograph and compatible preview paths
+      - name: Prepare compatible preview paths
         run: node scripts/prepare-preview.mjs
       - uses: actions/upload-pages-artifact@v3
         with:

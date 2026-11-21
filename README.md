@@ -38,10 +38,12 @@ Open `display-sign.html`, choose Print A5 sign, select A5 portrait at 100% scale
 
 The deployment workflow uploads only `site/`, excluding repository metadata and maintenance scripts.
 
-## Hero photograph trial
+## Photos and current layout
 
-The homepage uses Pexels photo 5588367, “Female Friends hugging each other”: https://www.pexels.com/photo/female-friends-hugging-each-other-5588367/ . Its license allows free website use: https://www.pexels.com/license/ (checked 21 November 2026). It is labelled as stock photography, not as project participants. The image is loaded from images.pexels.com because downloading was blocked in the editing environment; this creates a third-party image request, with no referrer. If the image fails to load (or JavaScript is disabled), the original letter illustration remains visible. For fully self-hosted assets, download the licensed original, save an optimised version under site/assets and update the image source. No tracking scripts have been added.
+Two photos from the user-supplied ZIP are stored directly in `site/assets/`: `friends-hugging.webp` (pexels-masudriguez-20349382.jpg) and `writing-a-letter.webp` (pexels-leish-6975182.jpg). These replace the previous remote stock photo; no external photo request or deployment download is needed. Photos are labelled as stock imagery, not project participants.
 
-## Latest preview update
+The shared hero label row places Christmas 2026 on the left and A Cheddar community project on the right. The headline and hero photo begin in the next grid row. On small screens, labels wrap and the photo follows the copy. The approved logo remains on the website and printable sign.
 
-The approved logo from the uploaded ZIP is now installed. The homepage highlights “A Cheddar community project” and “Spreading a little kindness, one letter at a time.” The workflow checks the real launch settings, tries to download the licensed photo for self-hosting, and preserves both the root and `/site/` URLs. If that download fails, the log reports a warning and the external-photo/letter fallback remains. A root redirect also supports existing branch-based Pages settings. Publication and photo availability still need confirmation from a successful deployment; a source push alone does not confirm them.
+The deployment preserves both root and `/site/` URLs. A source push alone does not confirm a successful live deployment.
+
+The selected images are resized and compressed as WebP for faster loading; the source ZIP remains unchanged.
