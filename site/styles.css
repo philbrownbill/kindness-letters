@@ -36,3 +36,6 @@
 .recipient-photo img{display:block;width:100%;height:auto;border-radius:10px}
 .recipient-photo figcaption{font-size:.75rem;color:#607080;line-height:1.6;margin-top:8px}
 @media(max-width:850px){.recipient{grid-template-columns:1fr;gap:28px}.recipient-photo{max-width:300px}.sharing-photo.cafe-photo{max-width:650px}}
+
+/* Align the writing steps with the main heading below the eyebrow on desktop. */
+@media(min-width:851px){#write .instructions{padding-top:calc(.75rem * 1.65 + 22px)}}
